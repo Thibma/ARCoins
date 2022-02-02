@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="ARCoins" customModuleProvider="target">
             <connections>
                 <outlet property="arView" destination="3y2-nc-LVa" id="cMk-8d-4cL"/>
+                <outlet property="scoreLabel" destination="X0h-PC-cZQ" id="f6B-XF-9PH"/>
+                <outlet property="timerLabel" destination="oOJ-P1-PZF" id="hgt-ch-uPw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,16 +28,32 @@
                         <outletCollection property="gestureRecognizers" destination="rTK-xx-IrQ" appends="YES" id="A2T-Pg-uLf"/>
                     </connections>
                 </arView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0h-PC-cZQ">
+                    <rect key="frame" x="248" y="44" width="156" height="45.5"/>
+                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="35"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temps : 60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOJ-P1-PZF">
+                    <rect key="frame" x="10" y="44" width="188.5" height="45.5"/>
+                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="35"/>
+                    <color key="textColor" systemColor="systemGreenColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="oOJ-P1-PZF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="8Di-mD-Isf"/>
                 <constraint firstAttribute="bottom" secondItem="3y2-nc-LVa" secondAttribute="bottom" id="Gsb-Wg-wrE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3y2-nc-LVa" secondAttribute="trailing" id="IMT-c3-zZJ"/>
                 <constraint firstItem="3y2-nc-LVa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MJO-qW-52p"/>
                 <constraint firstItem="3y2-nc-LVa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MLp-0k-YdP"/>
+                <constraint firstItem="X0h-PC-cZQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eeK-GA-gSK"/>
+                <constraint firstItem="oOJ-P1-PZF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mNl-cq-JKg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X0h-PC-cZQ" secondAttribute="trailing" constant="10" id="tlV-7K-gc8"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="64"/>
+            <point key="canvasLocation" x="137.68115942028987" y="63.616071428571423"/>
         </view>
         <tapGestureRecognizer id="rTK-xx-IrQ">
             <connections>
@@ -46,6 +64,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
